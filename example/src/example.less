@@ -1,0 +1,108 @@
+body {
+  background-color: #D3D0CB;
+  text-align: center;
+
+  .footer {
+    position: fixed;
+    left: 0px; bottom: 0px; right: 0px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    font-size: 14px;
+    background-color: #9FB1BC;
+    color: #fff;
+    padding-left: 20px;
+  }
+
+  button.example {
+    width: 50%;
+    margin: 7rem 0;
+    background-color: #E2C044;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+  }
+}
+
+button {
+  border: none;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.translate3d (@x, @y, @z) {
+  -webkit-transform: translate3d(@x, @y, @z);
+  -moz-transform: translate3d(@x, @y, @z);
+  -ms-transform: translate3d(@x, @y, @z);
+  -o-transform: translate3d(@x, @y, @z);
+  transform: translate3d(@x, @y, @z);
+}
+
+.transition (@type, @duration) {
+  -webkit-transition: @type @duration cubic-bezier(.03,.72,.36,.99);
+  -moz-transition: @type @duration cubic-bezier(.03,.72,.36,.99);
+  -ms-transition: @type @duration cubic-bezier(.03,.72,.36,.99);
+  -o-transition: @type @duration cubic-bezier(.03,.72,.36,.99);
+  transition: @type @duration cubic-bezier(.03,.72,.36,.99);
+}
+
+.bottom-sheet-wrapper {
+  .transition(opacity, 500ms);
+  position: fixed;
+  top: 0px; left: 0px;
+  z-index: 998;
+  width: 100%; height: 100%;
+  opacity: 0;
+
+  .bottom-sheet-block-layer {
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .bottom-sheet {
+    .transition(transform, 500ms);
+    .translate3d(0px, 100%, 0);
+    position: absolute;
+    bottom: 0px;
+    z-index: 999;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  &.hide {
+    display: none;
+  }
+
+  .bottom-sheet-item {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border: none;
+    border-top: 1px solid #ededed;
+    font-size: 16px;
+    &.cancel {
+      color: #d0021b;
+    }
+  }
+
+  .toast {
+    bottom: 110%;
+  }
+}
+
+.bottom-sheet-wrapper.enter {
+  opacity: 1;
+  .bottom-sheet {
+    .translate3d(0px, 0px, 0);
+  }
+}
