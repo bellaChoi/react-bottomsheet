@@ -24,7 +24,8 @@ var propTypes = {
   visible: _react.PropTypes.bool,
   className: _react.PropTypes.string,
   onClose: _react.PropTypes.func.isRequired,
-  appendCancelBtn: _react.PropTypes.bool
+  appendCancelBtn: _react.PropTypes.bool,
+  customLayout: _react.PropTypes.string
 };
 
 var defaultProps = {
@@ -118,7 +119,7 @@ var BottomSheet = (function (_React$Component) {
         'div',
         { className: 'bottom-sheet-wrapper ' + (this.props.className || '') + ' ' + (this.state.animationState || '') + ' ' + (this.state.isShow ? 'shown' : 'hide') },
         layer,
-        this.props.wrapperHtml,
+        this.props.customLayout,
         _react2['default'].createElement(
           'div',
           { className: 'bottom-sheet' },
