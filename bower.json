@@ -1,0 +1,32 @@
+{
+  "name": "react-bottomsheet",
+  "version": "0.0.0",
+  "description": "react-bottomsheet",
+  "main": "dist/react-bottomsheet.min.js",
+  "homepage": "https://github.com/BellaChoi/react-bottomsheet",
+  "authors": [
+    "BellaChoi"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "react",
+    "react-component",
+    "bottomsheet",
+    "bottom sheet",
+    "react bottom sheet"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".editorconfig",
+    ".gitignore",
+    "package.json",
+    "src",
+    "node_modules",
+    "example",
+    "test"
+  ]
+}
