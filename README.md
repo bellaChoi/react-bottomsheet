@@ -1,5 +1,7 @@
 # react-bottomsheet
 
+[![version](https://img.shields.io/npm/v/react-bottomsheet.svg) ![download](https://img.shields.io/npm/dm/react-bottomsheet.svg)](https://www.npmjs.com/package/react-bottomsheet)
+
 react bottom sheet component. It is not for react-native.
 
 ## Demo & Examples
