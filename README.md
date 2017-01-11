@@ -8,6 +8,8 @@ react bottom sheet component. It is not for react-native.
 
 Live demo: [BellaChoi.github.io/components/demos/react-bottomsheet](http://BellaChoi.github.io/react-bottomsheet/)
 
+![](https://zippy.gfycat.com/RigidApprehensiveHake.gif)
+
 To build the examples locally, run:
 
 ```
