@@ -77,6 +77,10 @@ class BottomSheet extends React.Component {
     this.props.onCloseFinishAnimation && this.props.onCloseFinishAnimation()
   }
 
+  componentWillUnmount () {
+    document.getElementsByTagName('html')[0].style.overflow = 'auto'
+  }
+
   render () {
     const layer = this.props.showBlockLayer ? <div className='bottom-sheet-block-layer' onClick={this.props.onClose} /> : null
 
