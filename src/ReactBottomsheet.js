@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const propTypes = {
   showBlockLayer: PropTypes.bool,
@@ -91,11 +92,15 @@ class BottomSheet extends React.Component {
         <div className='bottom-sheet'>
           {this.props.children}
           {this.props.list && this.props.list.map((item, idx) => {
-            return (<button key={idx} className='bottom-sheet-item' onClick={item.handler}>{item.title}</button>)
-          })}
+             return (<button key={idx} className='bottom-sheet-item' onClick={item.handler}>
+                       {item.title}
+                     </button>)
+           })}
           {this.props.appendCancelBtn && (() => {
-            return (<button className='bottom-sheet-item cancel' onClick={this.props.onClose}>cancel</button>)
-          })()}
+             return (<button className='bottom-sheet-item cancel' onClick={this.props.onClose}>
+                       cancel
+                     </button>)
+           })()}
         </div>
       </div>
     )
